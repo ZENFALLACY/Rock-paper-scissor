@@ -53,7 +53,8 @@ function Playgame(Playermove){
 
     updateScoreElement();
 
-    document.querySelector('.js-move').innerHTML = `You picked ${Playermove}. Computer picked ${Computermove}.`;
+    const emojiMap = { 'Rock': '🪨', 'Paper': '📄', 'Scissor': '✂️' };
+    document.querySelector('.js-move').innerHTML = `You picked ${emojiMap[Playermove]} ${Playermove}. Computer picked ${emojiMap[Computermove]} ${Computermove}.`;
 
     document.querySelector('.js-result').innerHTML = result;
 
